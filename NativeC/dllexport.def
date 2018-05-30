@@ -1,0 +1,3 @@
+LIBRARY "NativeC.dll"
+EXPORTS
+Add @1
