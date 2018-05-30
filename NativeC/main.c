@@ -10,6 +10,5 @@ int Add(int v1,int v2)
 __declspec(dllexport) int Handler(char* str,Function* callback)
 {
 	printf("%s \r\n",str);
-	printf("ÄãºÃ");
 	return callback(12,22);
 }
