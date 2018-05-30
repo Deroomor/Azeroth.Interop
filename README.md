@@ -12,6 +12,6 @@ dotnet framework托管代码和非托管代码（Windows COM，Native C）的互
   * 在C#中定义和C中函数指针一致的委托类型，P/Invoke不能使用泛型委托
   * 项目属性->调试，勾选 启用本机代码调试，就可以在vs中逐行调试C类库中的函数
   
-  托管代码导出COM组件，把com注册到windows
+托管代码导出COM组件，把com注册到windows
   
-  托管代码导入windows已经注册的COM组件
+托管代码导入windows已经注册的COM组件
