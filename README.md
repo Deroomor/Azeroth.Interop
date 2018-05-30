@@ -7,9 +7,9 @@ dotnet framework托管代码和非托管代码（Windows COM，Native C）的互
   * 必须`导出`那些给C#调用的函数，导出方法1：使用__declspec(dllexport)直接修饰方法；导出方法2：添加一个def文件，添加链接器的参数 /def def文件名
   * 函数调用方式必须为`_stdcall` 或者`_cdecl`,其他方式不可以，windows api的函数调用方式都是_stdcall，visual studio给vc编译器的默认编译参数是`_cdecl`，可以在项目属性编译器中更改默认参数
 * c#项目中的规则
-  * 定义与导出函数一致的static方法，（方法名称和函数名称一致，方法签名和函数签名一致），
+  * 定义与导出函数一致的static方法，（方法名称和函数名称一致，方法签名和函数签名一致），添加System.Runtime.InteropServices.DllImportAttribute到该方法。
   * 在c#中定义和C中结构一致的struct，保证参数类型，返回值类型一致，
-  * 在C#中定义和C中函数签名一致的委托类型，P/Invoke不能使用泛型委托
+  * 在C#中定义和C中函数指针一致的委托类型，P/Invoke不能使用泛型委托
   * 项目属性->调试，勾选 启用本机代码调试，就可以在vs中逐行调试C类库中的函数
   
   托管代码导出COM组件，把com注册到windows
